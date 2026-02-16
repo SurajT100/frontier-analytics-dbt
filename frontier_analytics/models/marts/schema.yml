@@ -1,0 +1,50 @@
+version: 2
+
+models:
+  - name: mart_sap__sales_orders
+    description: "Final SAP sales orders table combining sharing and non-sharing orders. Filtered to current financial year, excluding cancelled orders, zero margin, IS subcategory, and POWER SERVICE SBU."
+    columns:
+      - name: order_id
+        description: "Unique SAP sales order entry ID"
+        data_tests:
+          - not_null
+      - name: so_number
+        description: "SAP sales order document number"
+        data_tests:
+          - not_null
+      - name: margin
+        description: "Order margin value in INR"
+        data_tests:
+          - not_null
+      - name: sharing_type
+        description: "Whether order is Sharing or Not Sharing"
+        data_tests:
+          - accepted_values:
+              values:
+                - 'Sharing'
+                - 'Not Sharing'
+      - name: financial_quarter
+        description: "Indian financial year quarter (Q1=Apr-Jun, Q2=Jul-Sep, Q3=Oct-Dec, Q4=Jan-Mar)"
+        data_tests:
+          - accepted_values:
+              values:
+                - 'Q1'
+                - 'Q2'
+                - 'Q3'
+                - 'Q4'
+
+  - name: mart_crm__pipeline
+    description: "CRM pipeline opportunities expanded by SBU and OEM. One row per opportunity-SBU-OEM combination. Filtered to current financial year close dates."
+    columns:
+      - name: opportunity_id
+        description: "Unique CRM opportunity ID"
+        data_tests:
+          - not_null
+      - name: stage
+        description: "Current opportunity stage in the sales pipeline"
+        data_tests:
+          - not_null
+      - name: bottomline
+        description: "Bottom line value for this SBU/OEM combination"
+        data_tests:
+          - not_null

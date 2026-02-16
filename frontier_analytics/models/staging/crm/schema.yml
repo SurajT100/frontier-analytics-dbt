@@ -1,0 +1,19 @@
+version: 2
+
+sources:
+  - name: crm
+    schema: CRM
+    quoting:
+      schema: true
+      identifier: true
+    tables:
+      - name: Opportunity
+        description: "CRM Opportunity pipeline records"
+      - name: Users
+        description: "CRM system users and sales reps"
+      - name: Company
+        description: "CRM company/account records"
+      - name: Custom_Captions
+        description: "CRM lookup values for SBU, OEM, Block, Vertical etc"
+      - name: Lead
+        description: "CRM lead records linked to opportunities"

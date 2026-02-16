@@ -1,0 +1,21 @@
+version: 2
+
+sources:
+  - name: excel_data
+    schema: Excel_Data
+    quoting:
+      schema: true
+      identifier: true
+    tables:
+      - name: SAP_Account_Type_Mapping
+        description: "Maps SAP customer groups to account types"
+      - name: SAP_Block_Master_Table
+        description: "Maps SAP block codes to final block names"
+      - name: SBU_Target
+        description: "Target data with Block, Region, Block Head mapping"
+      - name: SBU_Name_Master
+        description: "Standardizes SBU names from SAP codes"
+      - name: CRM_Account_Type_Mapping
+        description: "Maps CRM opportunity segments to account types"
+      - name: KAM_Target
+        description: "KAM-level targets by block"

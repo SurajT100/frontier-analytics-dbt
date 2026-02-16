@@ -1,0 +1,19 @@
+version: 2
+
+sources:
+  - name: sap
+    schema: SAP
+    quoting:
+      schema: true
+      identifier: true
+    tables:
+      - name: ORDR
+        description: "SAP Sales Order headers"
+      - name: RDR1
+        description: "SAP Sales Order line items"
+      - name: OPRC
+        description: "SAP Profit Centres - used for both Blocks and KAM mapping"
+      - name: OITM
+        description: "SAP Item master data"
+      - name: "@F_MARGINSHARING"
+        description: "SAP Margin sharing entries for shared orders"

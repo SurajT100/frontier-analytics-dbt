@@ -1,0 +1,40 @@
+{
+    "path_count": 135,
+    "parsed_path_count": 1,
+    "static_analysis_path_count": 1,
+    "static_analysis_parsed_path_count": 1,
+    "is_partial_parse_enabled": true,
+    "is_static_analysis_enabled": true,
+    "read_files_elapsed": 0.005809919000057562,
+    "load_macros_elapsed": 0.0003673589999380056,
+    "parse_project_elapsed": 0.1860263799999302,
+    "patch_sources_elapsed": 2.37300000662799e-05,
+    "process_manifest_elapsed": 0.0003177190001224517,
+    "load_all_elapsed": 0.29658322699970086,
+    "projects": [
+        {
+            "project_name": "frontier_analytics",
+            "elapsed": 0.18598070899997765,
+            "parsers": [
+                {
+                    "parser": "model",
+                    "elapsed": 0.18597152500024094,
+                    "parsed_path_count": 1
+                }
+            ],
+            "parsed_path_count": 1
+        },
+        {
+            "project_name": "dbt_postgres",
+            "elapsed": 0,
+            "parsers": [],
+            "parsed_path_count": 0
+        },
+        {
+            "project_name": "dbt",
+            "elapsed": 0,
+            "parsers": [],
+            "parsed_path_count": 0
+        }
+    ]
+}
